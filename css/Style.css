@@ -1,0 +1,558 @@
+@font-face {
+    font-family: 'Schriftensatz Swiss tt0001m';
+    src: url('/assets/fonts/tt0001m.ttf');
+}
+
+@font-face {
+    font-family: 'Schriftensatz Swiss SW721KCI.TTF';
+    src: url('/assets/fonts/SW721KCI.TTF');
+}
+
+html,
+body,
+form,
+fieldset,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+blockquote,
+ul,
+ol,
+dl,
+address {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fff;
+    font-family: 'Schriftensatz Swiss tt0001m';
+    box-sizing: border-box;
+    max-width: 1300px;
+    margin: 0 auto;
+    color: #333;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+hr {
+    clear: both;
+    visibility: hidden;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+a {
+    font-size: 1.3em;
+}
+
+
+/* navBAr */
+/* background for list-item */
+
+nav {
+    z-index: 10;
+    background-color: #fff;
+}
+.background-two {
+    background-color: #f7f8f6;
+}
+
+.link-container {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    align-items: center;
+    height: 100%;
+    position: relative;
+    z-index: 0;
+}
+
+.link-two {
+    color: #cce63d;
+    transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
+}
+
+.link-two:hover {
+    color: #111;
+    transition: color 1s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+
+/* yello hover */
+.link-two::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    clip-path: polygon(0% -20%, 100% -30%, 100% -10%, 0% 0%, 0% 130%, 100% 120%, 100% 100%, 0% 110%);
+    background-color: #ffee06;
+    transition: clip-path 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.link-two:hover::before {
+    clip-path: polygon(0% 10%, 100% 0%, 100% 20%, 0% 30%, 0% 100%, 100% 90%, 100% 70%, 0% 80%);
+}
+
+.link-two::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 5ch;
+    height: 5ch;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%) rotate(0deg) scale(0);
+    transition: transform 1s ease;
+    background-color: #d8cc1e;
+}
+
+.link-two:hover::after {
+    transform: translate(50%, -50%) rotate(135deg) scale(1);
+}
+
+
+/* biene animation */
+.hero-section{
+    min-height: 50vh;
+    max-height: 90vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.actionimage {
+    max-width: 900px;
+    height: auto;
+    position: relative;
+    animation-name: example;
+    animation-duration: 5s;
+    padding: 10vw;
+    
+}
+
+@keyframes example {
+    0% {
+        top: -200px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
+/* Text in Cover */
+#rcorners2 {
+    border-radius: 30px;
+    padding: 10px;
+}
+
+/* Arrow */
+#myBtn {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 20px;
+    /* Place the button at the bottom of the page */
+    right: 30px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: red;
+    /* Set a background color */
+    color: white;
+    /* Text color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    padding: 15px;
+    /* Some padding */
+    border-radius: 10px;
+    /* Rounded corners */
+    font-size: 18px;
+    /* Increase font size */
+}
+
+#myBtn:hover {
+    background-color: #555;
+    /* Add a dark-grey background on hover */
+}
+
+.h6-card {
+    font-weight: bold;
+}
+
+
+/* Arrow style ends  */
+
+#cards {
+    padding-left: 20px;
+}
+
+.card1 {
+    background-color: #8dbd1c;
+    color: white;
+    animation: mymove1;
+    animation-duration: 1;
+    animation-fill-mode: forwards;
+}
+
+.card2 {
+    background-color: rgb(202, 20, 172);
+    color: white;
+    animation: mymove1;
+    animation-duration: 1.2;
+    animation-fill-mode: forwards;
+}
+
+.card3 {
+    background-color: #1393ca;
+    color: white;
+    animation: mymove1;
+    animation-duration: 1.4s;
+    animation-fill-mode: forwards;
+}
+
+.card4 {
+    background-color: red;
+    color: white;
+    animation: mymove1;
+    animation-duration: 1.6s;
+    animation-fill-mode: forwards;
+}
+
+
+
+@keyframes mymove1 {
+    from {
+        top: 150px;
+    }
+
+    to {
+        top: 0px;
+    }
+}
+
+.img_card {
+    transition: width 2s, height 2s, transform 2s;
+    opacity: 0.8;
+}
+
+.img_card:hover {
+    opacity: 1;
+}
+
+.title2 {
+    font-size: 36px;
+    color: #c85239;
+    text-align: center;
+    font-family: 'Oleo Script';
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+/* end card style here */
+
+
+/* Info-section Style start*/
+
+.row3 {
+    background: url("../assets/images/shutterstock_605013488.jpg") center / cover no-repeat;
+}
+
+@media (max-width: 800px) {
+    .row3 {
+        background: rgb(248, 248, 246);
+    }
+}
+
+
+
+.list_card {
+    opacity: 0.8;
+}
+
+.list_card:hover {
+    opacity: 1;
+}
+
+.hr {
+    /* centre verticalement les enfants entre eux */
+    align-items: center;
+    /* active flexbox */
+    display: flex;
+    /* garde le texte centré s’il passe sur plusieurs lignes ou si flexbox n’est pas supporté */
+    text-align: center;
+}
+
+.hr::before,
+.hr::after {
+    /* la couleur est volontairement absente ; ainsi elle sera celle du texte */
+    border-top: .0625em solid;
+    /* nécessaire pour afficher les pseudo-éléments */
+    content: "";
+    /* partage le reste de la largeur disponible */
+    flex: 1;
+    /* espace les traits du texte */
+    margin: 0 .5em;
+}
+
+
+/* upload Style end*/
+/* gallery start here  */
+.gallery-grid {
+    font-family: Raleway, sans-serif;
+    text-align: center;
+    padding: 0 0 72px;
+    border: 1px solid rgba(212, 94, 104, 0.959);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.gallery-grid .gallery-image {
+    position: relative;
+    transition: all 0.3s ease 0s;
+}
+
+.gallery-grid .gallery-image a {
+    display: block;
+}
+
+.gallery-grid .gallery-image img {
+    width: 100%;
+    height: 350px;
+}
+
+.gallery-grid .pic-1 {
+    opacity: 1;
+    transition: all 0.3s ease-out 0s;
+}
+
+.gallery-grid:hover .pic-1 {
+    opacity: 1;
+}
+
+.gallery-grid .pic-2 {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease-out 0s;
+}
+
+.gallery-grid:hover .pic-2 {
+    opacity: 1;
+}
+
+.gallery-grid .social {
+    width: 150px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    opacity: 0;
+    transform: translateY(-50%) translateX(-50%);
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+
+.gallery-grid:hover .social {
+    opacity: 1;
+    top: 50%;
+}
+
+.gallery-grid .social li {
+    display: inline-block;
+}
+
+.gallery-grid .social li a {
+    color: #fff;
+    font-size: 26px;
+    line-height: 40px;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    margin: 0 2px;
+    display: block;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.gallery-grid .social li a:hover {
+    color: rgb(253, 5, 5);
+    font-size: 46px;
+}
+
+.gallery-grid .social li a:after,
+.gallery-grid .social li a:before {
+    content: attr(data-tip);
+    color: #fff;
+    background-color: #000;
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    padding: 1px 5px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+    top: -30px;
+}
+
+.gallery-grid .social li a:after {
+    content: "";
+    height: 15px;
+    width: 15px;
+    border-radius: 0;
+    transform: translateX(-50%) rotate(45deg);
+    top: -20px;
+    z-index: -1;
+}
+
+.gallery-grid .social li a:hover:after,
+.gallery-grid .social li a:hover:before {
+    opacity: 1;
+}
+
+.gallery-grid .gallery-discount-label,
+.gallery-grid .gallery-new-label {
+    color: rgb(8, 8, 8);
+    background-color: #fffb00;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+.gallery-grid .gallery-discount-label {
+    background-color: #673ab7;
+    left: auto;
+    right: 0;
+}
+
+.gallery-grid .gallery-content {
+    background-color: #fff;
+    text-align: center;
+    padding: 12px 0;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -27px;
+    z-index: 1;
+    transition: all 0.3s;
+}
+
+.gallery-grid:hover .gallery-content {
+    bottom: 0;
+}
+
+.gallery-grid .title {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    margin: 0 0 10px;
+    transition: all 0.3s ease 0s;
+}
+
+.gallery-grid .title a {
+    color: #828282;
+}
+
+.gallery-grid .title a:hover,
+.gallery-grid:hover .title a {
+    color: #3330f0;
+}
+
+@media only screen and (max-width: 990px) {
+    .gallery-grid {
+        margin-bottom: 30px;
+    }
+}
+
+/* Footer style */
+
+.a_footer {
+    color: #000;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.title_footer {
+    color: #673ab7;
+}
+
+.row4 {
+    background: url("../assets/images/shutterstock_605013488.jpg") center / cover no-repeat;
+}
+
+.a_breadcrumb-item {
+    font-size: 15px;
+}
+
+.a_breadcrumb-item:hover {
+    color: #3330f0;
+}
+
+.submission-cards {
+    cursor: pointer;
+}
+
+.child-age {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    padding: 5px 10px;
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: #ffee00;
+}
+
+.spinner-border {
+    padding: 30px;
+    align-self: center;
+    margin: 40px;
+}
+
+.dropdown-menu {
+    text-align: center;
+    width: 300px !important;
+    height: 180px !important;
+}
+
+.form-icon {
+    min-width: 46px;
+}
+
+.like-button{
+    opacity: 100 !important;
+}
